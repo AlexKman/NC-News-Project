@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Router, Link } from "@reach/router";
-import { getArticleById, patchVotes, getCommentsByArticleId } from "../api";
+import { getArticleById, patchVotes } from "../api";
 import "../App.css";
 
 class Article extends Component {
