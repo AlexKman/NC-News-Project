@@ -23,9 +23,16 @@ export const getArticlesByTopic = async topic => {
   return res.data.articles;
 };
 
-export const patchVotes = (voteChange, articleId) => {
+export const patchArticleVotes = (voteChange, articleId) => {
+  const incVotes = { inc_votes: voteChange };
+  return axios.patch(`${BASE_URL}/articles/${articleId}`, incVotes);
+};
+
+export const patchCommentVotes = (voteChange, article_id, comment_id) => {
+  const incVotes = { inc_votes: voteChange };
   return axios.patch(
-    `${BASE_URL}/articles/${articleId}?inc_votes=${voteChange}`
+    `${BASE_URL}/articles/${article_id}/comments/${comment_id}`,
+    incVotes
   );
 };
 
@@ -47,4 +54,13 @@ export const postArticleByTopic = async (topic, title, body, username) => {
     postingArticle
   );
   return data.article;
+};
+
+export const postCommentByArticle = async (id, body, username) => {
+  const postingComment = { body: body, username: username };
+  const { data } = await axios.post(
+    `${BASE_URL}/articles/${id}/comments`,
+    postingComment
+  );
+  return data.comment;
 };

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Router, Link } from "@reach/router";
 import { getArticlesByTopic, postArticleByTopic } from "../api";
 import "../App.css";
 
@@ -21,9 +22,9 @@ class Topic extends Component {
         <h1>Articles:</h1>
         <ul id="topicalArticleList">
           {articles.map((article, index) => (
-            <div>
+            <Link to={`/articles/${article.article_id}`}>
               <p>• {article.title}</p>
-            </div>
+            </Link>
           ))}
         </ul>
         <button onClick={this.handleClick}>Post Article</button>
@@ -61,7 +62,7 @@ class Topic extends Component {
     const body = event.target.value;
     this.setState({ body });
   };
-  handleClick = event => {
+  handleClick = () => {
     this.setState({ title: "", username: "", body: "" });
     postArticleByTopic(
       this.props.topic,

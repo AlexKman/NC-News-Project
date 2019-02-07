@@ -24,10 +24,9 @@ class App extends Component {
           <Router>
             <Home path="/" />
             <Topics path="/topics" />
-            <Article path="/articles/:article_id" />
+            <Article path="/articles/:article_id/*" />
             <Articles path="/articles" />
             <Topic path="/topics/:topic/articles"> </Topic>
-            <Comments path="/articles/:article_id/comments"> </Comments>
           </Router>
           {/* </Auth> */}
         </React.Fragment>

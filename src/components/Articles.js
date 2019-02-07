@@ -20,10 +20,7 @@ class Articles extends Component {
         <h1>Articles</h1>
         <ul>
           {articles.map(article => (
-            <Link
-              to={`/articles/${article.article_id}/comments`}
-              id="articlelinks"
-            >
+            <Link to={`/articles/${article.article_id}`} id="articlelinks">
               {article.title}
               <br />
               <br />
