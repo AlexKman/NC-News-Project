@@ -13,8 +13,8 @@ export const Home = () => (
     <br />
     <p id="secondHomeP">
       Furthermore you can also view all the comments for the given articles,
-      upvote or downvote the comments upon your choice and have the option to
-      add your own comments
+      upvote or downvote the comments upon your choice and even have the option
+      to add your own comments.
     </p>
   </div>
 );
