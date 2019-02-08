@@ -1,6 +1,6 @@
 ## Northcoders News
 
-This is the front end project for **NC-News** built using react. It uses my back end API which is hosted on **https://tranquil-lake-37102.herokuapp.com/**
+This is the front end project for **NC-News** built using react. It uses my back end API which is hosted on **https://tranquil-lake-37102.herokuapp.com/** and the repository for the back end is **https://github.com/AlexKman/BE2-NC-Knews**
 
 This front end repository is hosted on **https://loving-thompson-f157a3.netlify.com/**
 
