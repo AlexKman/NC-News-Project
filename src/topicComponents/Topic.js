@@ -22,8 +22,8 @@ class Topic extends Component {
         <h1>Articles:</h1>
         <ul id="topicalArticleList">
           {articles.map((article, index) => (
-            <Link to={`/articles/${article.article_id}`}>
-              <p>• {article.title}</p>
+            <Link id="topicArticleLinks" to={`/articles/${article.article_id}`}>
+              <p> {article.title}</p>
             </Link>
           ))}
         </ul>

@@ -5,19 +5,21 @@ import "../App.css";
 
 class Articles extends Component {
   state = {
-    articles: []
+    articles: [],
+    haserror: null
   };
 
   async componentDidMount() {
     const articles = await getArticles();
     this.setState({ articles });
   }
+
   render() {
     const { articles } = this.state;
 
     return (
       <div id="articleslist">
-        <h1>Articles</h1>
+        <h1 id="articlesheader">Articles</h1>
         <ul>
           {articles.map(article => (
             <Link to={`/articles/${article.article_id}`} id="articlelinks">

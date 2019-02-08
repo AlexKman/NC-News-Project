@@ -7,12 +7,6 @@ export const getArticles = async () => {
   return res.data.articles;
 };
 
-// export const getUserByUsername = username => {
-//   return axios.get(`${BASE_URL}/users/${username}`).then(({ data }) => {
-//     ({ users: data });
-//   });
-// };
-
 export const getArticleById = async id => {
   const res = await axios.get(`${BASE_URL}/articles/${id}`);
   return res.data.article;
@@ -38,7 +32,7 @@ export const patchCommentVotes = (voteChange, article_id, comment_id) => {
 
 export const getTopics = async () => {
   const res = await axios.get(`${BASE_URL}/topics`);
-  console.log(res.data);
+
   return res.data.topics;
 };
 
@@ -63,4 +57,10 @@ export const postCommentByArticle = async (id, body, username) => {
     postingComment
   );
   return data.comment;
+};
+
+export const getUserByUsername = username => {
+  return axios.get(`${BASE_URL}/users/${username}`).then(({ data }) => {
+    return data.user;
+  });
 };

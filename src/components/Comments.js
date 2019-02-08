@@ -11,7 +11,8 @@ class Comments extends Component {
   state = {
     comments: [],
     body: "",
-    username: ""
+    username: "",
+    hasntvoted: true
   };
 
   async componentDidMount() {
@@ -19,7 +20,8 @@ class Comments extends Component {
     this.setState({ comments });
   }
   render() {
-    const { comments } = this.state;
+    const { comments, hasntvoted } = this.state;
+
     return (
       <div id="commentsForArticle">
         <h1>Comments: </h1>
@@ -27,12 +29,26 @@ class Comments extends Component {
         <ul>
           {comments.map(comment => (
             <div id="comments">
-              <button onClick={() => this.handleVoteClick(1)}>Voteup</button>
-              <button onClick={() => this.handleVoteClick(-1)}>VoteDown</button>
-              <p>Author: {comment.author} </p>
-              <p>Date: {comment.date}</p>
+              <button
+                onClick={() =>
+                  hasntvoted && this.handleVoteClick(1, comment.comment_id)
+                }
+              >
+                ↑
+              </button>
               <p>Votes: {comment.votes}</p>
-              <p>Comment: {comment.body}</p>
+              <button
+                onClick={() =>
+                  hasntvoted && this.handleVoteClick(-1, comment.comment_id)
+                }
+              >
+                ↓
+              </button>
+              <p>By: {comment.author} </p>
+              <p>On: {comment.date}</p>
+
+              <p>{comment.body}</p>
+              <p>comment_id: {comment.comment_id}</p>
               <br />
             </div>
           ))}
@@ -40,20 +56,19 @@ class Comments extends Component {
       </div>
     );
   }
-  handleVoteClick = voteChange => {
-    patchCommentVotes(
-      voteChange,
-      this.props.article_id,
-      this.props.comment_id
-    ).then(article => {
-      this.setState(prevState => {
-        return {
-          comments: {
-            ...prevState.comment,
-            votes: prevState.comment.votes + voteChange
-          }
-        };
-      });
+  handleVoteClick = (voteChange, comment_id) => {
+    patchCommentVotes(voteChange, this.props.article_id, comment_id);
+    const updatedArray = this.state.comments.map(comment => {
+      if (comment.comment_id === comment_id) {
+        comment.votes += voteChange;
+      }
+      return comment;
+    });
+    this.setState(prevState => {
+      return {
+        hasntvoted: false,
+        comments: updatedArray
+      };
     });
   };
 }

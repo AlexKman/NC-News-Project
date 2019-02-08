@@ -12,13 +12,23 @@ class Article extends Component {
   state = {
     article: {},
     body: "",
-    username: ""
+    username: "",
+    hasntvoted: true,
+    hasError: null
   };
 
-  async componentDidMount() {
-    const article = await getArticleById(this.props.article_id);
+  fetchArticle = () => {
+    getArticleById(this.props.article_id)
+      .then(article => {
+        this.setState({ article });
+      })
+      .catch(err => {
+        this.setState({ hasError: true });
+      });
+  };
 
-    this.setState({ article });
+  componentDidMount() {
+    this.fetchArticle();
   }
 
   render() {
@@ -31,18 +41,36 @@ class Article extends Component {
       comment_count
     } = this.state.article;
 
-    return (
-      <div id="articlediv">
-        <h1>Article</h1>
-        <p>Topic: {topic}</p>
-        <p>Title : {title}</p>
-        <p>Author : {author} </p>
-        <p>Body : {body}</p>
-        <p>Votes: {votes}</p>
-        <button onClick={() => this.handleVoteClick(1)}>Voteup</button>
-        <button onClick={() => this.handleVoteClick(-1)}>VoteDown</button>
+    const { hasntvoted, hasError } = this.state;
 
-        <button onClick={this.handleClick}>Post new comment</button>
+    if (hasError) {
+      return <h1>404 Article not found</h1>;
+    }
+
+    return (
+      <div id="articleDiv">
+        <p id="articleTitle">{title}</p>
+        <p id="topictitle">Topic: {topic}</p>
+        <p id="bytitle">By : {author} </p>
+        <p id="articlebody">{body}</p>
+
+        <button
+          id="voteup"
+          onClick={() => hasntvoted && this.handleVoteClick(1)}
+        >
+          ↑
+        </button>
+        <p id="votestitle"> {votes}</p>
+        <button
+          id="votedown"
+          onClick={() => hasntvoted && this.handleVoteClick(-1)}
+        >
+          ↓
+        </button>
+
+        <button id="postComment" onClick={this.handleClick}>
+          Post new comment
+        </button>
         <input
           placeholder="body"
           onChange={this.changeBody}
@@ -55,7 +83,7 @@ class Article extends Component {
         />
 
         <Link to={`/articles/${this.props.article_id}/comments`}>
-          <button>Get Comments</button>
+          <button id="getComments">Get Comments</button>
           <br />
           <br />
         </Link>
@@ -73,7 +101,6 @@ class Article extends Component {
       this.state.body,
       this.state.username
     ).then(comment => {
-      console.log(comment, "comment here");
       this.setState({ comments: [...this.state.comments, comment] });
     });
   };
@@ -89,6 +116,7 @@ class Article extends Component {
     patchArticleVotes(voteChange, this.props.article_id).then(article => {
       this.setState(prevState => {
         return {
+          hasntvoted: false,
           article: {
             ...prevState.article,
             votes: prevState.article.votes + voteChange

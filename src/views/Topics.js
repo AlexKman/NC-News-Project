@@ -22,8 +22,6 @@ class Topics extends Component {
               {topic.slug}
               <br />
               <br />
-              <br />
-              <br />
             </Link>
           ))}
         </ul>
