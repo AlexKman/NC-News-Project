@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Router, Link } from "@reach/router";
 import { getArticlesByTopic, postArticleByTopic } from "../api";
-import "../App.css";
+
+import "../css/topic.css";
 
 class Topic extends Component {
   state = {
@@ -18,8 +19,8 @@ class Topic extends Component {
     const { articles } = this.state;
 
     return (
-      <div id="articlesForATopic">
-        <h1>Articles:</h1>
+      <div id="topicArticlesPage">
+        <h1 id="articlesheader">Articles</h1>
         <ul id="topicalArticleList">
           {articles.map((article, index) => (
             <Link id="topicArticleLinks" to={`/articles/${article.article_id}`}>
@@ -27,26 +28,30 @@ class Topic extends Component {
             </Link>
           ))}
         </ul>
-        <button onClick={this.handleClick}>Post Article</button>
-        <input
-          placeholder="title"
-          onChange={this.changeTitle}
-          value={this.state.title}
-          id="titleInput"
-        />
-        <input
-          placeholder="username"
-          id="usernameInput"
-          onChange={this.changeUsername}
-          value={this.state.username}
-        />
-        <br />
-        <input
-          placeholder="body"
-          id="bodyInput"
-          onChange={this.changeBody}
-          value={this.state.body}
-        />
+        <section id="articlePost">
+          <button id="submitarticle" onClick={this.handleClick}>
+            Post Article
+          </button>
+          <input
+            placeholder="title"
+            onChange={this.changeTitle}
+            value={this.state.title}
+            id="titleInput"
+          />
+          <input
+            placeholder="username"
+            id="usernameInput"
+            onChange={this.changeUsername}
+            value={this.state.username}
+          />
+          <br />
+          <input
+            placeholder="body"
+            id="bodyInput"
+            onChange={this.changeBody}
+            value={this.state.body}
+          />
+        </section>
       </div>
     );
   }

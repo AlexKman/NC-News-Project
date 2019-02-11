@@ -8,6 +8,8 @@ import "./App.css";
 import Article from "./components/Article";
 import Topic from "./topicComponents/Topic";
 import { NotFound } from "./errorComponents/NotFound";
+import Nav from "./components/Nav";
+import "./css/home.css";
 
 class App extends Component {
   state = {
@@ -45,23 +47,5 @@ class App extends Component {
     this.setState({ user: "" });
   };
 }
-
-const Nav = () => {
-  return (
-    <nav id="nav">
-      <Link to="/" id="navComp">
-        Home{" "}
-      </Link>
-      &nbsp;
-      <Link to="/topics" id="navComp">
-        Topics
-      </Link>
-      &nbsp;
-      <Link to="/articles" id="navComp">
-        Articles
-      </Link>
-    </nav>
-  );
-};
 
 export default App;

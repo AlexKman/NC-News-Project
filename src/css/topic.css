@@ -1,0 +1,36 @@
+#topicArticlesPage {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+#articlesHeader {
+  text-decoration: underline;
+}
+#topicalArticleList {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#topicArticleLinks {
+  text-decoration: none;
+  color: black;
+  background-color: bisque;
+}
+
+#topicArticleLinks:hover {
+  text-decoration: underline;
+}
+
+#articlePost {
+  background-color: bisque;
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+}

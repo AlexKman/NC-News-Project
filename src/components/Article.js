@@ -5,7 +5,8 @@ import {
   patchArticleVotes,
   postCommentByArticle
 } from "../api";
-import "../App.css";
+
+import "../css/article.css";
 import Comments from "./Comments";
 
 class Article extends Component {
@@ -49,44 +50,46 @@ class Article extends Component {
 
     return (
       <div id="articleDiv">
-        <p id="articleTitle">{title}</p>
-        <p id="topictitle">Topic: {topic}</p>
-        <p id="bytitle">By : {author} </p>
-        <p id="articlebody">{body}</p>
-
-        <button
-          id="voteup"
-          onClick={() => hasntvoted && this.handleVoteClick(1)}
-        >
-          ↑
-        </button>
-        <p id="votestitle"> {votes}</p>
-        <button
-          id="votedown"
-          onClick={() => hasntvoted && this.handleVoteClick(-1)}
-        >
-          ↓
-        </button>
-
-        <button id="postComment" onClick={this.handleClick}>
-          Post new comment
-        </button>
-        <input
-          placeholder="body"
-          onChange={this.changeBody}
-          value={this.state.body}
-        />
-        <input
-          placeholder="username"
-          onChange={this.changeUsername}
-          value={this.state.username}
-        />
+        <p>Topic: {topic}</p>
+        <p>By : {author} </p>
+        <p id="body">{body}</p>
+        <section id="voting">
+          <button
+            id="voteup"
+            onClick={() => hasntvoted && this.handleVoteClick(1)}
+          >
+            ↑
+          </button>
+          <p id="votestitle"> {votes}</p>
+          <button
+            id="votedown"
+            onClick={() => hasntvoted && this.handleVoteClick(-1)}
+          >
+            ↓
+          </button>
+        </section>
 
         <Link to={`/articles/${this.props.article_id}/comments`}>
           <button id="getComments">Get Comments</button>
           <br />
           <br />
         </Link>
+        <section id="postcomment">
+          <button id="postComment" onClick={this.handleClick}>
+            Post new comment
+          </button>
+          <input
+            placeholder="body"
+            onChange={this.changeBody}
+            value={this.state.body}
+          />
+          <input
+            placeholder="username"
+            onChange={this.changeUsername}
+            value={this.state.username}
+          />
+        </section>
+
         <Router>
           <Comments path="comments"> </Comments>
         </Router>

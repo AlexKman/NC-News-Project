@@ -1,0 +1,28 @@
+#topicsdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#topicLinks {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 80px;
+  background-color: white;
+  border-left: solid 18px white;
+  border-right: solid 18px white;
+  border-bottom: solid 5px white;
+  border-top: solid 5px white;
+}
+
+#topicLinks:hover {
+  text-decoration: underline;
+}
+
+#topicslist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

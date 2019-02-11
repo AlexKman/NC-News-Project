@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getUserByUsername } from "../api";
+import "../css/auth.css";
 
 class Auth extends Component {
   state = {
@@ -16,7 +17,7 @@ class Auth extends Component {
       return children;
     } else {
       return (
-        <div id="login">
+        <div class="login">
           <h3> Please Login!</h3>
 
           <form onSubmit={this.handleSubmit}>
@@ -25,8 +26,8 @@ class Auth extends Component {
               placeholder="type username here"
               onChange={this.handleChange}
             />
-            <h1>Available users:</h1>
-            <div id="usersdiv">
+            <h1>Available users</h1>
+            <div class="usersdiv">
               {" "}
               <ul>tickle122</ul>
               <ul>grumpy19</ul>

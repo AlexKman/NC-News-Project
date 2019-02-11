@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Router, Link } from "@reach/router";
 import "../App.css";
 import { getTopics } from "../api";
+import "../css/topics.css";
 
 class Topics extends Component {
   state = {
@@ -16,12 +17,10 @@ class Topics extends Component {
     const { topics } = this.state;
     return (
       <div id="topicsdiv">
-        <ul>
+        <ul id="topicslist">
           {topics.map(topic => (
             <Link to={`/topics/${topic.slug}/articles`} id="topicLinks">
               {topic.slug}
-              <br />
-              <br />
             </Link>
           ))}
         </ul>

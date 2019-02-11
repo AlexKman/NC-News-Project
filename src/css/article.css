@@ -1,0 +1,41 @@
+#articleDiv {
+  background-color: bisque;
+
+  border-bottom: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  font-size: 25px;
+  width: 80%;
+}
+
+#postcomment {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: bisque;
+}
+
+#getComments {
+  background-color: grey;
+  font-style: italic;
+}
+
+#postComment {
+  background-color: grey;
+  font-style: italic;
+}
+
+#voting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

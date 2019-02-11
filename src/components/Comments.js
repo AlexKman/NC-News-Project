@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Router, Link } from "@reach/router";
-import "../App.css";
+import "../css/comments.css";
 import {
   getCommentsByArticleId,
   postCommentByArticle,

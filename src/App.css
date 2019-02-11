@@ -1,56 +1,10 @@
 .App {
-  display: grid;
-  grid-template: 5em 1fr / 1fr;
-  align-content: center;
-  background-image: url("https://i2.wp.com/www.solidcolore.com/thumb/fdf1e1_background.jpg?ssl=1");
-  background-size: cover;
-}
-
-#home {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 50px;
-  margin-right: 40px;
-}
-
-#nav {
-  background-color: bisque;
-  border: solid 1.4px;
-  border-color: black;
+  height: 100vh;
   width: 100%;
-  display: flex;
-  height: 50%;
-  font-size: 34px;
-  text-decoration: none;
-}
-
-#navComp {
-  text-decoration: none;
-  font-stretch: expanded;
-  color: black;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#articleslist {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
   background-color: bisque;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  border: solid 1px;
 }
 
-#articleDiv {
-  background-color: bisque;
-  border: solid 1.4px;
-  border-color: black;
-}
-
-#articlebody {
-  margin-left: 20px;
-  margin-right: 70px;
-  background-color: azure;
-  border: solid 0.2px black;
-}
-#topictitle {
-  margin-left: 20px;
-}
 #bytitle {
   margin-left: 20px;
 }
@@ -74,7 +28,7 @@
 #articlesheader {
   margin-left: 39px;
   text-decoration: underline;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 #articlelinks {
@@ -84,37 +38,6 @@
 }
 #articlelinks:hover {
   text-decoration: underline;
-}
-
-#topicsdiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  margin-left: 250px;
-  background-color: bisque;
-  border: solid 1.5px;
-  text-align: center;
-  width: 30%;
-  height: 90%;
-}
-
-#topicLinks {
-  text-align: center;
-  text-decoration: none;
-  padding-right: 900px;
-
-  color: black;
-  font-size: 30px;
-}
-
-#topicLinks:hover {
-  text-decoration: underline;
-}
-
-#topicalArticleList {
-  background-color: bisque;
-  border: solid 1.5px;
 }
 
 #comments {
@@ -137,54 +60,4 @@
   padding-top: 5px;
   text-align: center;
   color: black;
-}
-
-#titleInput {
-  width: 10%;
-}
-
-#bodyInput {
-  width: 50.4%;
-}
-
-#topicArticleLinks {
-  text-decoration: none;
-  color: black;
-}
-
-#topicArticleLinks:hover {
-  text-decoration: underline;
-}
-
-#login {
-  text-align: center;
-  align-content: center;
-}
-
-#usersdiv {
-  border: solid 1px black;
-  width: 30%;
-  margin-left: 400px;
-  background-color: bisque;
-  align-items: center;
-  text-align: center;
-}
-#homepage {
-  text-align: center;
-}
-
-#firstHomeP {
-  font-size: 20px;
-  width: 50%;
-  text-align: center;
-  margin-left: 270px;
-  background-color: bisque;
-}
-
-#secondHomeP {
-  font-size: 20px;
-  width: 50%;
-  text-align: center;
-  margin-left: 270px;
-  background-color: bisque;
 }
