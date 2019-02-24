@@ -74,11 +74,13 @@ class Article extends Component {
           <br />
           <br />
         </Link>
-        <section id="postcomment">
+        <section id="commentsPost">
           <button id="postComment" onClick={this.handleClick}>
             Post new comment
           </button>
-          <input
+          <textarea
+            rows="5"
+            cols="5"
             placeholder="body"
             onChange={this.changeBody}
             value={this.state.body}

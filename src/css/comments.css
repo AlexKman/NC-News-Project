@@ -4,3 +4,16 @@
   margin-bottom: 10px;
   text-align: center;
 }
+#commentsForArticle {
+}
+
+#getComments {
+  text-align: center;
+
+  color: black;
+}
+
+#postcomment {
+  text-align: center;
+  color: black;
+}

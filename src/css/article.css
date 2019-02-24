@@ -34,6 +34,12 @@
   font-style: italic;
 }
 
+#commentsPost {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
 #voting {
   display: flex;
   flex-direction: column;

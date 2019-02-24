@@ -5,6 +5,10 @@
   background-color: bisque;
 }
 
+body {
+  background-color: bisque;
+}
+
 #bytitle {
   margin-left: 20px;
 }
@@ -38,26 +42,4 @@
 }
 #articlelinks:hover {
   text-decoration: underline;
-}
-
-#comments {
-  background-color: bisque;
-  border: solid 1.5px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-#getComments {
-  padding-bottom: 5px;
-  padding-top: 5px;
-  text-align: center;
-
-  color: black;
-}
-
-#postComment {
-  padding-bottom: 5px;
-  padding-top: 5px;
-  text-align: center;
-  color: black;
 }
