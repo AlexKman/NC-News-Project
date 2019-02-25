@@ -2,13 +2,13 @@
 
 ## Northcoders News
 
-NC Knews is a news single page webapp, built with React. It pulls data from the NC Knews API **https://tranquil-lake-37102.herokuapp.com/api** to display articles, users and comments. Users can register to post articles and comments, and up/downvote them to express their opinion. The repository for the back end API is here **https://github.com/AlexKman/BE2_NC_Knews/** . This front end repository is hosted on **https://youthful-shockley-af9891.netlify.com/**
+NC Knews is a news single page webapp, built with React. It pulls data from the NC Knews API [API]**https://tranquil-lake-37102.herokuapp.com/api** to display articles, users and comments. Users can login to post articles and comments, and upvote/downvote them after reading. The repository for the back end API is here [Repository]**https://github.com/AlexKman/BE2_NC_Knews/** . This front end repository is hosted on [FrontEnd]**https://youthful-shockley-af9891.netlify.com/**
 
 ## Using the site
 
-On loading of the page you will receive a list of usernames which can then be chosen to login with. After logging you can view a list of topics which lead to a list of articles for the given topic. The list of articles also have the option to view all comments, upload your own articles and also upload your own comments.
+On loading of the page you will receive a list of usernames which can then be chosen to login with. After logging you can view a list of topics which lead to a list of articles for the given topic. The list of articles also have the option to view all comments, upload your own articles and upload your own comments.
 
-These are a few users that are pre-made to log in as.
+## Available users
 
 ```
   tickle122
@@ -19,7 +19,7 @@ These are a few users that are pre-made to log in as.
   jessjelly
 ```
 
-On success, you'll now be free to post your own articles or comment/vote on existing ones. You can access these articles through the topics or the articles section.
+On login, you'll now be free to post your own articles or comment on existing ones. You can access these articles through the topics or the articles section.
 
 When posting a new article, you must first select an existing topic from coding, cooking or football. After that, you're free to enter your article's headline and body, and hit post! Following which your article will be live on the site and ready to view.
 
@@ -54,21 +54,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-## Deployment
-
-This version of the site is hosted live on Netlify. To host your own version on netlify, you can follow these steps:
-
-1. Install the Netlify CLI by running `sudo npm i -g netlify`
-2. Make sure you're in the local project folder
-3. Run `netlify login` in your terminal to sign in to your Netlify account - or create one.
-4. Run `netlify deploy` and follow the instructions in the CLI to host the site.
-5. Done! You should now be able to view the live version of your site.
-
 ## Built with
 
-[Create React App](https://github.com/facebook/create-react-app) - Used to bootstrap the app and streamline the creation process. \
-[Axios](https://www.npmjs.com/package/axios) - Sends requests to the backend API \
-[Reach/Router](https://github.com/reach/router) - Routing system used throughout the site \
+[Create React App](https://github.com/facebook/create-react-app) - To bootstrap the app and streamline the creation process.
+[Axios](https://www.npmjs.com/package/axios) - Sends requests to the backend API.
+[Reach/Router](https://github.com/reach/router) - Routing system used throughout the site.
 
 ## Authors
 
