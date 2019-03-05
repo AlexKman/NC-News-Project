@@ -6,6 +6,7 @@ import {
   postCommentByArticle
 } from "../api";
 
+import Button from "react-bootstrap/Button";
 import "../css/article.css";
 import Comments from "./Comments";
 
@@ -49,20 +50,23 @@ class Article extends Component {
     }
 
     return (
-      <div id="articleDiv">
-        <p>Topic: {topic}</p>
-        <p>By : {author} </p>
+      <div className="articleContainer">
+        <div className="topicAndBy">
+          <p>Topic: {topic}</p>
+          <p>By : {author} </p>
+        </div>
+
         <p id="body">{body}</p>
         <section id="voting">
           <button
-            id="voteup"
+            id="vote"
             onClick={() => hasntvoted && this.handleVoteClick(1)}
           >
             ↑
           </button>
           <p id="votestitle"> {votes}</p>
           <button
-            id="votedown"
+            id="vote"
             onClick={() => hasntvoted && this.handleVoteClick(-1)}
           >
             ↓
@@ -70,14 +74,14 @@ class Article extends Component {
         </section>
 
         <Link to={`/articles/${this.props.article_id}/comments`}>
-          <button id="getComments">Get Comments</button>
+          <Button variant="dark" id="getComments">
+            Get Comments
+          </Button>
           <br />
           <br />
         </Link>
         <section id="commentsPost">
-          <button id="postComment" onClick={this.handleClick}>
-            Post new comment
-          </button>
+          <p id="postNewComment">Post New Comment</p>
           <textarea
             rows="5"
             cols="5"
@@ -85,11 +89,10 @@ class Article extends Component {
             onChange={this.changeBody}
             value={this.state.body}
           />
-          <input
-            placeholder="username"
-            onChange={this.changeUsername}
-            value={this.state.username}
-          />
+
+          <Button variant="link" onClick={this.handleClick}>
+            Post new comment
+          </Button>
         </section>
 
         <Router>
@@ -104,7 +107,7 @@ class Article extends Component {
     postCommentByArticle(
       this.props.article_id,
       this.state.body,
-      this.state.username
+      localStorage.username
     ).then(comment => {
       this.setState({ comments: [...this.state.comments, comment] });
     });

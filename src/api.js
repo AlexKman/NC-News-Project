@@ -3,7 +3,7 @@ import axios from "axios";
 const BASE_URL = "https://tranquil-lake-37102.herokuapp.com/api";
 
 export const getArticles = async () => {
-  const res = await axios.get(`${BASE_URL}/articles`);
+  const res = await axios.get(`${BASE_URL}/articles?limit=5000`);
   return res.data.articles;
 };
 
@@ -13,7 +13,9 @@ export const getArticleById = async id => {
 };
 
 export const getArticlesByTopic = async topic => {
-  const res = await axios.get(`${BASE_URL}/topics/${topic}/articles`);
+  const res = await axios.get(
+    `${BASE_URL}/topics/${topic}/articles?limit=1000`
+  );
   return res.data.articles;
 };
 

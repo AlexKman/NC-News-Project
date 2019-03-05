@@ -1,36 +1,52 @@
 #topicArticlesPage {
-  background-color: bisque;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
 }
-#articlesHeader {
-  text-decoration: underline;
-}
+
 #topicalArticleList {
-  background-color: bisque;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  width: 50vw;
 }
 
 #topicArticleLinks {
   text-decoration: none;
   color: black;
-  background-color: bisque;
+  margin: 1em;
+  padding: 0.5em;
+  padding-bottom: 1.6em;
+  font-size: 1em;
+  background-color: #45434a;
+  text-align: center;
 }
 
-#topicArticleLinks:hover {
+#link {
+  color: black;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-style: italic;
+  font-family: Lato, sans-serif;
+  color: #ff312e;
+}
+
+#link:hover {
   text-decoration: underline;
 }
 
 #articlePost {
-  background-color: bisque;
-  margin-top: 100px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  grid-gap: 10px;
+  margin-top: 50pt;
+  align-self: center;
+  width: 100%;
+
+  background-color: #333138;
+
+  padding: 0.1em;
+  height: 200px;
+}
+
+#post {
+  width: 50%;
+  margin-top: 1em;
 }

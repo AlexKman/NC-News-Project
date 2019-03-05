@@ -1,12 +1,12 @@
 .App {
-  height: 100vh;
-  width: 100%;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
-  background-color: bisque;
+  display: grid;
+  grid-template: 5em 1fr/1fr;
+  margin: 1em;
+  background-color: #333138;
 }
 
 body {
-  background-color: bisque;
+  background-color: #333138;
 }
 
 #bytitle {
@@ -33,13 +33,4 @@ body {
   margin-left: 39px;
   text-decoration: underline;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-
-#articlelinks {
-  text-decoration: none;
-  font-size: 15px;
-  color: black;
-}
-#articlelinks:hover {
-  text-decoration: underline;
 }

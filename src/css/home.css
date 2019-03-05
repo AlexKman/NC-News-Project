@@ -1,19 +1,13 @@
-#homepage {
-  display: flex;
-  flex-direction: column;
+.homepage {
+  background-color: #333138;
+  margin: auto;
   align-items: center;
+  width: 60%;
 }
 
-#home {
-  font-size: 24px;
-}
-
-#firstHomeP {
-  font-size: 20px;
+#info {
+  margin-top: 12vh;
+  font-size: 1.8em;
   text-align: center;
-}
-
-#secondHomeP {
-  font-size: 20px;
-  text-align: center;
+  color: #bcbbbd;
 }

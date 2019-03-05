@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getUserByUsername } from "../api";
+
 import "../css/auth.css";
 
 class Auth extends Component {
@@ -10,7 +11,6 @@ class Auth extends Component {
   };
 
   render() {
-    console.log(this.props.user);
     const { user, children } = this.props;
     const { userText, userErr } = this.state;
     if (user) {
@@ -54,6 +54,7 @@ class Auth extends Component {
       .then(user => {
         setUser(user);
       })
+      .then(localStorage.setItem("user", userText))
       .catch(err => {
         this.setState({
           userErr: err,

@@ -1,17 +1,31 @@
-#nav {
-  background-color: whitesmoke;
-  border: solid 1.4px;
-  border-color: black;
-  width: 99%;
-  display: flex;
-  height: 10%;
-  font-size: 30px;
-  text-decoration: none;
-  text-align: justify;
-}
+@import url("https://fonts.googleapis.com/css?family=Lato%7CLa+Belle+Aurore%7CMerriweather");
 
+.navBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  font-family: Lato, sans-serif;
+}
 #navComp {
   text-decoration: none;
   font-stretch: expanded;
   color: black;
+  padding: 1.5vw, 0.3vw;
+  font-size: 1.7vw;
+  letter-spacing: 0.07em;
+  margin: 0;
+  color: #ff313e;
+}
+
+.pagetitle {
+  text-align: center;
+  font-size: 1.1em;
+  font-style: italic;
+  color: #ff313e;
+}
+
+.fancyfont {
+  font-size: 3.2vw;
+  font-family: La Belle Aurore;
+  color: #de6e4b;
 }

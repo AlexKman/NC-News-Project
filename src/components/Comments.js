@@ -30,6 +30,7 @@ class Comments extends Component {
           {comments.map(comment => (
             <div id="comments">
               <button
+                id="votesButton"
                 onClick={() =>
                   hasntvoted && this.handleVoteClick(1, comment.comment_id)
                 }
@@ -38,6 +39,7 @@ class Comments extends Component {
               </button>
               <p>Votes: {comment.votes}</p>
               <button
+                id="votesButton"
                 onClick={() =>
                   hasntvoted && this.handleVoteClick(-1, comment.comment_id)
                 }

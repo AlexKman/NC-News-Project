@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Router, Link } from "@reach/router";
 import { getArticles } from "../api";
-import "../App.css";
+
 import "../css/articles.css";
 
 class Articles extends Component {
@@ -20,8 +20,8 @@ class Articles extends Component {
 
     return (
       <div id="articleslist">
-        <h1> First ten Articles</h1>
-        <ul>
+        <h1 id="fancyfont"> All Articles</h1>
+        <ul className="articleUlList">
           {articles.map(article => (
             <Link to={`/articles/${article.article_id}`} id="articlelinks">
               {article.title}

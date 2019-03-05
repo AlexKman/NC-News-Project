@@ -1,10 +1,11 @@
 #comments {
-  background-color: bisque;
+  background-color: #45434a;
   border: solid 1.5px;
-  margin-bottom: 10px;
+
   text-align: center;
-}
-#commentsForArticle {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  width: 50vw;
 }
 
 #getComments {
@@ -16,4 +17,11 @@
 #postcomment {
   text-align: center;
   color: black;
+}
+
+#votesButton {
+  width: 20%;
+  background-color: #333138;
+  margin-left: 15vh;
+  margin-top: 1vh;
 }

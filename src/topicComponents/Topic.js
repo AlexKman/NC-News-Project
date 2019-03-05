@@ -9,7 +9,7 @@ class Topic extends Component {
     articles: [],
     title: "",
     body: "",
-    username: ""
+    username: localStorage.user
   };
   async componentDidMount() {
     const articles = await getArticlesByTopic(this.props.topic);
@@ -20,37 +20,35 @@ class Topic extends Component {
 
     return (
       <div id="topicArticlesPage">
-        <h1 id="articlesheader">Articles</h1>
+        <h1>All articles for {this.props.topic}</h1>
         <ul id="topicalArticleList">
           {articles.map((article, index) => (
-            <Link id="topicArticleLinks" to={`/articles/${article.article_id}`}>
-              <p> {article.title}</p>
-            </Link>
+            <div id="topicArticleLinks">
+              {" "}
+              <Link id="link" to={`/articles/${article.article_id}`}>
+                <p>{article.title}</p>
+              </Link>
+              <p> Author: {article.author}</p>
+              <p>Comments: {article.comment_count}</p>
+              <p> Votes: {article.votes}</p>
+            </div>
           ))}
         </ul>
         <section id="articlePost">
-          <button id="submitarticle" onClick={this.handleClick}>
-            Post Article
-          </button>
           <input
             placeholder="title"
             onChange={this.changeTitle}
             value={this.state.title}
-            id="titleInput"
-          />
-          <input
-            placeholder="username"
-            id="usernameInput"
-            onChange={this.changeUsername}
-            value={this.state.username}
+            id="post"
           />
           <br />
           <input
             placeholder="body"
-            id="bodyInput"
             onChange={this.changeBody}
             value={this.state.body}
+            id="post"
           />
+          <button onClick={this.handleClick}>Submit</button>
         </section>
       </div>
     );
@@ -73,7 +71,7 @@ class Topic extends Component {
       this.props.topic,
       this.state.title,
       this.state.body,
-      this.state.username
+      localStorage.user
     ).then(article => {
       this.setState({ articles: [...this.state.articles, article] });
     });

@@ -2,7 +2,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: bisque;
+  background-color: inherit;
+}
+#articlelinks {
+  text-decoration: none;
+  color: black;
+  margin: 1em;
+  padding: 0.5em;
+  padding-bottom: 1.6em;
+  font-size: 1em;
+  background-color: #45434a;
+  text-align: center;
+}
+#articlelinks:hover {
+  text-decoration: underline;
+}
 
-  border: solid 1px black;
+.articleUlList {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  width: 50vw;
+}
+
+#fancyfont {
+  font-size: 3.2vw;
+  font-family: La Belle Aurore;
+  color: #de6e4b;
 }
