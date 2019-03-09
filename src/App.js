@@ -23,6 +23,11 @@ class App extends Component {
       <div className="App">
         <React.Fragment>
           <Nav />
+          <div className="pagetitle">
+            <h1>
+              Northcoders <span className="fancyfont">news</span>
+            </h1>
+          </div>
           <Auth user={user} setUser={this.setUser}>
             <Router>
               <Home path="/" />

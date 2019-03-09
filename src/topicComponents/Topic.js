@@ -19,8 +19,8 @@ class Topic extends Component {
     const { articles } = this.state;
 
     return (
-      <div id="topicArticlesPage">
-        <h1>All articles for {this.props.topic}</h1>
+      <div className="topicDiv">
+        <h1 id="header">All articles for {this.props.topic}</h1>
         <ul id="topicalArticleList">
           {articles.map((article, index) => (
             <div id="topicArticleLinks">

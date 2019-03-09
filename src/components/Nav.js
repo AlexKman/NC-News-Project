@@ -18,11 +18,6 @@ const Nav = () => {
           Articles
         </Link>
       </nav>
-      <div className="pagetitle">
-        <h1>
-          Northcoders <span className="fancyfont">news</span>
-        </h1>
-      </div>
     </div>
   );
 };

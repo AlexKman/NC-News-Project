@@ -5,7 +5,7 @@ import "../css/auth.css";
 
 class Auth extends Component {
   state = {
-    userText: "",
+    userText: "jessjelly",
     userErr: null,
     userLoadingState: false
   };

@@ -20,13 +20,16 @@ class Topics extends Component {
         <ul id="topicslist">
           {topics.map(topic => (
             <Link to={`/topics/${topic.slug}/articles`} id="topicLinks">
-              {topic.slug}
+              {this.capitalise(topic.slug)}
             </Link>
           ))}
         </ul>
       </div>
     );
   }
+  capitalise = str => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
 }
 
 export default Topics;
