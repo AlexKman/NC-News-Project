@@ -10,7 +10,7 @@ const Nav = () => {
           Home{" "}
         </Link>
         &nbsp;
-        <Link to="/topics" id="navComp">
+        <Link to="/topics" id="topicComp">
           Topics
         </Link>
         &nbsp;

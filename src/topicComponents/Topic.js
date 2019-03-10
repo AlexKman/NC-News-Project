@@ -35,18 +35,19 @@ class Topic extends Component {
           ))}
         </ul>
         <section id="articlePost">
+          <text>Post your own article!</text>
           <input
             placeholder="title"
             onChange={this.changeTitle}
             value={this.state.title}
-            id="post"
+            id="title"
           />
           <br />
           <input
             placeholder="body"
             onChange={this.changeBody}
             value={this.state.body}
-            id="post"
+            id="body"
           />
           <button onClick={this.handleClick}>Submit</button>
         </section>

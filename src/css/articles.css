@@ -7,12 +7,13 @@
 #articlelinks {
   text-decoration: none;
   color: black;
-  margin: 1em;
-  padding: 0.5em;
-  padding-bottom: 1.6em;
-  font-size: 1em;
+  margin: 1.2vh;
+  padding: 0.5vh;
+  padding-bottom: 1.6vh;
+  font-size: 3vh;
   background-color: #45434a;
   text-align: center;
+  width: 30vw;
 }
 #articlelinks:hover {
   text-decoration: underline;
@@ -22,11 +23,10 @@
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  width: 50vw;
 }
 
 #fancyfont {
-  font-size: 3.2vw;
+  font-size: 6vh;
   font-family: La Belle Aurore;
   color: #de6e4b;
 }
