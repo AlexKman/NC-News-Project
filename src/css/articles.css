@@ -14,6 +14,8 @@
   background-color: #45434a;
   text-align: center;
   width: 30vw;
+  font-family: Lato, sans-serif;
+  color: #ff312e;
 }
 #articlelinks:hover {
   text-decoration: underline;
