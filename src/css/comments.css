@@ -1,11 +1,21 @@
-#comments {
+.commentsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#commentsHeader {
+  font-size: 6vh;
+  font-family: La Belle Aurore;
+  color: #de6e4b;
+}
+.comments {
+  display: flex;
+  flex-direction: column;
   background-color: #45434a;
-  border: solid 1.5px;
-
   text-align: center;
-  display: inline-grid;
-  grid-template-columns: auto auto;
   width: 50vw;
+  align-self: center;
+  margin-bottom: 10px;
 }
 
 #getComments {
@@ -18,10 +28,16 @@
   text-align: center;
   color: black;
 }
-
+#commentsBody {
+  color: #de6e4b;
+}
 #votesButton {
-  width: 20%;
-  background-color: #333138;
-  margin-left: 15vh;
+  width: 8vw;
+  align-self: center;
+
   margin-top: 1vh;
+}
+#commentsVoteCount {
+  align-self: center;
+  font-size: 4vh;
 }

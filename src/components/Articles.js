@@ -24,9 +24,14 @@ class Articles extends Component {
         <ul className="articleUlList">
           {articles.map(article => (
             <Link to={`/articles/${article.article_id}`} id="articlelinks">
-              {article.title}
-              <br />
-              <br />
+              <section id="title">{article.title}</section>
+              <section id="author">By {article.author}</section>
+              <section id="votes">Rating = {article.votes}</section>
+              <section id="commentCount">
+                {" "}
+                {article.comment_count} comments
+              </section>
+              <section id="topic"> {article.topic}</section>
             </Link>
           ))}
         </ul>

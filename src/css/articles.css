@@ -4,31 +4,69 @@
   align-items: center;
   background-color: inherit;
 }
-#articlelinks {
-  text-decoration: none;
-  color: black;
-  margin: 1.2vh;
-  padding: 0.5vh;
-  padding-bottom: 1.6vh;
-  font-size: 3vh;
-  background-color: #45434a;
-  text-align: center;
-  width: 30vw;
-  font-family: Lato, sans-serif;
-  color: #ff312e;
-}
-#articlelinks:hover {
-  text-decoration: underline;
-}
-
 .articleUlList {
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+}
+#articlelinks {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  margin: 1.2vh;
+  padding: 1.4vh;
+
+  font-size: 3vh;
+  background-color: #45434a;
+
+  width: 25vw;
+  font-family: Lato, sans-serif;
+  color: #de6e4b;
+}
+#title:hover {
+  text-decoration: underline;
+}
+#title {
+}
+#author {
+  font-family: Lato, sans-serif;
+  color: black;
+  font-size: 1.7vh;
+}
+#votes {
+  font-family: Lato, sans-serif;
+  color: black;
+  font-size: 1.7vh;
+}
+#commentCount {
+  font-family: Lato, sans-serif;
+  color: black;
+  font-size: 1.7vh;
+}
+#topic {
+  font-size: 3vh;
+  font-family: La Belle Aurore;
+  color: #de6e4b;
+  align-self: flex-end;
+  margin-right: 10px;
 }
 
 #fancyfont {
   font-size: 6vh;
   font-family: La Belle Aurore;
   color: #de6e4b;
+}
+
+@media only screen and (max-width: 600px) {
+  .articleUlList {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #articlelinks {
+    width: 50vw;
+  }
 }

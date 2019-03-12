@@ -24,13 +24,14 @@ class Topic extends Component {
         <ul id="topicalArticleList">
           {articles.map((article, index) => (
             <div id="topicArticleLinks">
-              {" "}
               <Link id="link" to={`/articles/${article.article_id}`}>
                 <p>{article.title}</p>
               </Link>
-              <p> Author: {article.author}</p>
-              <p>Comments: {article.comment_count}</p>
-              <p> Votes: {article.votes}</p>
+              <section id="author">{article.author}</section>
+              <section id="topicVotes">Rating = {article.votes}</section>
+              <section id="topicCommentCount">
+                {article.comment_count} comments{" "}
+              </section>
             </div>
           ))}
         </ul>
