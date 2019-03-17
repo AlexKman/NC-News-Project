@@ -66,3 +66,7 @@ export const getUserByUsername = username => {
     return data.user;
   });
 };
+export const getUsers = async () => {
+  const res = await axios.get(`${BASE_URL}/users`);
+  return res.data.users;
+};

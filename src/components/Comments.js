@@ -24,11 +24,11 @@ class Comments extends Component {
 
     return (
       <div id="commentsForArticle">
-        <h1>Comments: </h1>
+        <h1 id="commentsHeader">Comments: </h1>
 
-        <ul>
+        <ul className="comments">
           {comments.map(comment => (
-            <div id="comments">
+            <div id="comment">
               <button
                 id="votesButton"
                 onClick={() =>
@@ -47,7 +47,6 @@ class Comments extends Component {
                 ↓
               </button>
               <p>By: {comment.author} </p>
-              <p>On: {comment.date}</p>
 
               <p>{comment.body}</p>
               <p>comment_id: {comment.comment_id}</p>

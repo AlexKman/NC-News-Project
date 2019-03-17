@@ -17,7 +17,6 @@
 }
 #topicComp {
   text-decoration: none;
-
   color: black;
   padding: 1.5vw, 0.3vw;
   font-size: 2.8vh;
@@ -38,4 +37,19 @@
   font-size: 5vh;
   font-family: La Belle Aurore;
   color: #de6e4b;
+}
+@media only screen and (max-width: 600px) {
+  .navBar {
+    display: flex;
+  }
+}
+#usersComp {
+  text-decoration: none;
+
+  color: black;
+  padding: 1.5vw, 0.3vw;
+  font-size: 2.8vh;
+  letter-spacing: 0.5vh;
+  margin-left: 0.5vh;
+  color: #ff313e;
 }

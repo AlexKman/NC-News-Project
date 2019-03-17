@@ -9,15 +9,14 @@
   color: #de6e4b;
 }
 .comments {
-  display: flex;
-  flex-direction: column;
-  background-color: #45434a;
-  text-align: center;
-  width: 50vw;
-  align-self: center;
-  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 30fr;
+  grid-row-gap: 10px;
 }
-
+#comment {
+  background-color: #45434a;
+  width: 50vw;
+}
 #getComments {
   text-align: center;
 
@@ -36,6 +35,11 @@
   align-self: center;
 
   margin-top: 1vh;
+}
+@media only screen and (max-width: 600px) {
+  #votesButton {
+    width: 25vw;
+  }
 }
 #commentsVoteCount {
   align-self: center;

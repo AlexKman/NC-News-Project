@@ -4,6 +4,7 @@ import "../css/home.css";
 export const Home = () => (
   <div className="homepage">
     <div id="info">
+      <p id="welcomeTag">Welcome {localStorage.user}!</p>
       <p>
         {" "}
         Through this site you can view all articles for a given topic through

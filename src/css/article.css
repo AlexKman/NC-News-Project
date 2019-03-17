@@ -1,8 +1,8 @@
 .articleContainer {
   display: flex;
   flex-direction: column;
-  font-size: 2.5vh;
-  justify-content: center;
+  width: 80vw;
+  height: 100vh;
 }
 
 #articleTitle {
@@ -12,22 +12,21 @@
   align-self: center;
   width: 50vw;
   text-decoration: underline;
-  margin-bottom: 4vh;
+  margin-bottom: 8vh;
+  margin-left: 8vh;
 }
-#articleBody {
+#body {
   margin-top: 2.5vh;
   width: 50vw;
   align-self: center;
-  margin-bottom: 100px;
 }
 #commentsPost {
   grid-column: 1/3;
   grid-row: 1/2;
-  margin-top: 20vw;
+
   display: flex;
   flex-direction: column;
   width: 40%;
-  color: #333138;
 }
 #articleAuthor {
   color: #de6e4b;
@@ -35,9 +34,27 @@
 #postNewComment {
   color: black;
 }
-
 #vote {
-  background-color: #333138;
-  border-color: black;
-  margin-left: 1.3em;
+  width: 8vw;
+  align-self: center;
+
+  margin-top: 1vh;
+}
+@media only screen and (max-width: 600px) {
+  #vote {
+    width: 25vw;
+  }
+  #body {
+    width: 80vw;
+  }
+}
+
+#getCommentsLink {
+  align-self: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #articleTitle {
+    width: 90vw;
+  }
 }

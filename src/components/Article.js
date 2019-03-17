@@ -51,35 +51,24 @@ class Article extends Component {
 
     return (
       <div className="articleContainer">
-        <div className="topicAndBy">
-          <p>Topic: {topic}</p>
-          <p>By : {author} </p>
-        </div>
-
-        <p id="body">{body}</p>
-        <section id="voting">
+        <section id="articleTitle">{title}</section>
+        <section id="body">{body}</section>
+        <section className="voting">
           <button
             id="vote"
             onClick={() => hasntvoted && this.handleVoteClick(1)}
           >
-            ↑
+            Vote up
           </button>
-          <p id="votestitle"> {votes}</p>
+          <p id="votestitle"> Votes: {votes}</p>
           <button
             id="vote"
             onClick={() => hasntvoted && this.handleVoteClick(-1)}
           >
-            ↓
+            Vote down
           </button>
         </section>
 
-        <Link to={`/articles/${this.props.article_id}/comments`}>
-          <Button variant="dark" id="getComments">
-            Get Comments
-          </Button>
-          <br />
-          <br />
-        </Link>
         <section id="commentsPost">
           <p id="postNewComment">Post New Comment</p>
           <textarea
@@ -89,12 +78,23 @@ class Article extends Component {
             onChange={this.changeBody}
             value={this.state.body}
           />
-
+          <div className="topicAndBy">
+            <p>By : {author} </p>
+          </div>
           <Button variant="link" onClick={this.handleClick}>
             Post new comment
           </Button>
         </section>
-
+        <Link
+          id="getCommentsLink"
+          to={`/articles/${this.props.article_id}/comments`}
+        >
+          <Button variant="dark" id="getComments">
+            Get Comments
+          </Button>
+          <br />
+          <br />
+        </Link>
         <Router>
           <Comments path="comments"> </Comments>
         </Router>
