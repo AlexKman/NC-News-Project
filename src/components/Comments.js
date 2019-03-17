@@ -26,7 +26,7 @@ class Comments extends Component {
       <div id="commentsForArticle">
         <h1 id="commentsHeader">Comments: </h1>
 
-        <ul className="comments">
+        <ul>
           {comments.map(comment => (
             <div id="comment">
               <button
