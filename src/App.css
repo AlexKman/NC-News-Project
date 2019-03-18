@@ -28,6 +28,26 @@ body {
   margin-left: 20px;
 }
 
+.formWrapper {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonOrange {
+  background-color: #de6e4b !important;
+  border: 0;
+}
+
+.buttonOrange:hover {
+  background-color: #894029 !important;
+}
+
+.buttonOrange:focus {
+  outline: none;
+}
+
 #votedown {
   margin-left: 20px;
 }
