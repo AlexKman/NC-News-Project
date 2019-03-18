@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { getUserByUsername } from "../api";
 import { InputGroup, FormControl } from "react-bootstrap";
-
+import Button from "react-bootstrap/Button";
 import "../css/auth.css";
 
 class Auth extends Component {
@@ -31,6 +31,7 @@ class Auth extends Component {
                 aria-describedby="inputGroup-sizing-sm"
               />
             </InputGroup>
+            <Button onClick={this.handleSubmit}>Submit</Button>
             <div class="usersdiv">
               <h3>Available users</h3> <ul>tickle122</ul>
               <ul>grumpy19</ul>
