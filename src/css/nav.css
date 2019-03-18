@@ -1,13 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Lato%7CLa+Belle+Aurore%7CMerriweather");
+@import url("https://fonts.googleapis.com/css?family=Lato%7CLa+Belle+Aurore%7CMerriweather|Montserrat|Barlow");
+
 .navBar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   font-family: Lato, sans-serif;
   align-self: flex-start;
 }
+
+.navBar .navItem {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  padding: 1.8vw;
+  letter-spacing: 0.5vh;
+  color: #ededed;
+  font-size: 1.1em;
+}
+
+.navBar .navItem:hover {
+  color: #c17070;
+}
+
 #navComp {
   text-decoration: none;
-
   color: black;
   padding: 1.5vw, 0.3vw;
   font-size: 2.8vh;
@@ -27,14 +41,13 @@
 }
 .pagetitle {
   text-align: center;
-  font-size: 3vh;
-
-  font-style: italic;
+  font-size: 2.8em;
+  font-family: "Montserrat", sans-serif;
   align-self: center;
-  color: #ff313e;
+  color: #bc4548;
 }
 .fancyfont {
-  font-size: 5vh;
+  font-size: 0.8em;
   font-family: La Belle Aurore;
   color: #de6e4b;
 }

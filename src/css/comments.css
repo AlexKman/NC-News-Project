@@ -7,7 +7,6 @@
   font-size: 6vh;
   font-family: La Belle Aurore;
   color: #de6e4b;
-  margin-top: 200px;
 }
 .comments {
   display: grid;
@@ -15,14 +14,51 @@
   grid-row-gap: 10px;
 }
 #comment {
-  margin-top: 100px;
-  background-color: #45434a;
+  margin-top: 2em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #b2b2b2;
   width: 50vw;
+  position: relative;
 }
+
+.commentVotesTitle {
+  position: absolute;
+  margin: auto;
+  top: -1.3em;
+  font-size: 0.8em;
+  left: 1em;
+  border: 0.4em solid black;
+  text-align: center !important;
+  background: black;
+  color: white;
+}
+
+.commentBodyContent {
+  margin: 1em;
+  text-align: left;
+}
+
+.voteUpComment {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  right: -1.5em;
+  top: 10%;
+}
+
+.voteDownComment {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  left: -1.5em;
+  top: 10%;
+}
+
 #getComments {
   text-align: center;
-
-  color: black;
+  margin-top: 1vh;
 }
 
 #postcomment {
@@ -32,15 +68,30 @@
 #commentsBody {
   color: #de6e4b;
 }
-#votesButton {
-  width: 8vw;
-  align-self: center;
 
-  margin-top: 1vh;
-}
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 450px) {
+  #comment {
+    width: inherit;
+  }
+
   #votesButton {
     width: 25vw;
+  }
+  .voteUpComment {
+    right: -2.5em !important;
+  }
+
+  .voteDownComment {
+    left: -2.5em !important;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .voteUpComment {
+    right: -4.5vh;
+  }
+
+  .voteDownComment {
+    left: -4.5vh;
   }
 }
 #commentsVoteCount {

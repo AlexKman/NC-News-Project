@@ -52,44 +52,57 @@ class Article extends Component {
     return (
       <div className="articleContainer">
         <section id="articleTitle">{title}</section>
-        <section id="body">{body}</section>
-        <section className="voting">
+        <section id="body">
           <button
             id="vote"
+            className="voteUp"
             onClick={() => hasntvoted && this.handleVoteClick(1)}
           >
-            Vote up
+            <img src="https://i.imgur.com/EIeM1Up.png" alt="" />
           </button>
-          <p id="votestitle"> Votes: {votes}</p>
           <button
             id="vote"
+            class="voteDown"
             onClick={() => hasntvoted && this.handleVoteClick(-1)}
           >
-            Vote down
+            <img src="https://i.imgur.com/qyFduXD.png" alt="" />
           </button>
-        </section>
-
-        <section id="commentsPost">
-          <p id="postNewComment">Post New Comment</p>
-          <textarea
-            rows="5"
-            cols="5"
-            placeholder="body"
-            onChange={this.changeBody}
-            value={this.state.body}
-          />
-          <div className="topicAndBy">
-            <p>By : {author} </p>
+          <div className="bodyWrapper">
+            <p id="votestitle">{votes} votes</p>
+            <p>{body}</p>
           </div>
-          <Button variant="link" onClick={this.handleClick}>
-            Post new comment
-          </Button>
+        </section>
+        <br />
+        <section id="commentsPost">
+          <div class="formWrapper">
+            <p id="postNewComment">Post New Comment</p>
+            <textarea
+              rows="5"
+              cols="5"
+              className="commentInput"
+              placeholder="Just type here to comment in this article!"
+              onChange={this.changeBody}
+              value={this.state.body}
+            />
+            <div className="topicAndBy">
+              <p>
+                By : <b>{author}</b>{" "}
+              </p>
+            </div>
+            <Button
+              variant="info"
+              className="buttonOrange"
+              onClick={this.handleClick}
+            >
+              Post new comment
+            </Button>
+          </div>
         </section>
         <Link
           id="getCommentsLink"
           to={`/articles/${this.props.article_id}/comments`}
         >
-          <Button variant="dark" id="getComments">
+          <Button variant="secondary" id="getComments">
             Get Comments
           </Button>
           <br />

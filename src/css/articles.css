@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Pontano+Sans");
+
 #articleslist {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,21 @@
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  font-family: "Pontano Sans", sans-serif;
 }
+
+#votestitle {
+  position: absolute;
+  margin: auto;
+  display: block;
+  top: -4.3em;
+  min-width: 5.5em;
+  height: 2em;
+  text-align: center !important;
+  background: black;
+  color: white;
+}
+
 #articlelinks {
   display: flex;
   flex-direction: column;
@@ -16,38 +32,40 @@
   color: black;
   margin: 1.2vh;
   padding: 1.4vh;
-
   font-size: 3vh;
-  background-color: #45434a;
-
+  background-color: #bcbbbd;
+  border-radius: 14px;
+  box-shadow: 0.2em 0.2em 3px 1px #26191b;
   width: 25vw;
-  font-family: Lato, sans-serif;
   color: #de6e4b;
 }
+
 #title:hover {
   text-decoration: underline;
 }
 #title {
+  color: #1e1a1b;
+  font-weight: bold;
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+  width: 100% !important;
 }
 #author {
-  font-family: Lato, sans-serif;
-  color: black;
-  font-size: 1.7vh;
+  color: #423636;
+  font-size: 0.7em;
 }
 #votes {
-  font-family: Lato, sans-serif;
   color: black;
   font-size: 1.7vh;
 }
 #commentCount {
-  font-family: Lato, sans-serif;
   color: black;
   font-size: 1.7vh;
 }
 #topic {
   font-size: 3vh;
   font-family: La Belle Aurore;
-  color: #de6e4b;
+  color: #1e1a1b;
   align-self: flex-end;
   margin-right: 10px;
 }
@@ -68,5 +86,6 @@
 @media only screen and (max-width: 600px) {
   #articlelinks {
     width: 50vw;
+    box-shadow: none;
   }
 }

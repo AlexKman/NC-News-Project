@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getUserByUsername } from "../api";
+import { InputGroup, FormControl } from "react-bootstrap";
 
 import "../css/auth.css";
 
@@ -18,18 +19,20 @@ class Auth extends Component {
     } else {
       return (
         <div class="login">
-          <h3> Please Login!</h3>
+          <h3>Login</h3>
 
           <form onSubmit={this.handleSubmit}>
-            <input
-              value={userText}
-              placeholder="type username here"
-              onChange={this.handleChange}
-            />
-            <h1>Available users</h1>
+            <InputGroup size="sm" className="mb-3">
+              <FormControl
+                aria-label="Small"
+                value={userText}
+                placeholder="type username here"
+                onChange={this.handleChange}
+                aria-describedby="inputGroup-sizing-sm"
+              />
+            </InputGroup>
             <div class="usersdiv">
-              {" "}
-              <ul>tickle122</ul>
+              <h3>Available users</h3> <ul>tickle122</ul>
               <ul>grumpy19</ul>
               <ul>happyamy2016</ul>
               <ul>cooljmessy</ul>

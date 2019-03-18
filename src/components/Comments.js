@@ -31,25 +31,31 @@ class Comments extends Component {
             <div id="comment">
               <button
                 id="votesButton"
+                className="voteUpComment"
                 onClick={() =>
                   hasntvoted && this.handleVoteClick(1, comment.comment_id)
                 }
               >
-                ↑
+                <img src="https://i.imgur.com/EIeM1Up.png" alt="" />
               </button>
-              <p>Votes: {comment.votes}</p>
+              <p className="commentVotesTitle">
+                comment_id: {comment.comment_id} Votes: {comment.votes}
+              </p>
               <button
                 id="votesButton"
+                className="voteDownComment"
                 onClick={() =>
                   hasntvoted && this.handleVoteClick(-1, comment.comment_id)
                 }
               >
-                ↓
+                <img src="https://i.imgur.com/qyFduXD.png" alt="" />
               </button>
-              <p>By: {comment.author} </p>
+              <br />
+              <div className="commentBody">
+                <section class="commentBodyContent">{comment.body}</section>
+                <p>By: {comment.author} </p>
+              </div>
 
-              <p>{comment.body}</p>
-              <p>comment_id: {comment.comment_id}</p>
               <br />
             </div>
           ))}

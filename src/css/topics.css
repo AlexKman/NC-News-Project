@@ -1,8 +1,10 @@
 #topicLinks {
   text-decoration: none;
-  color: black;
-  margin-top: 2.6em;
-  margin-bottom: 3em;
+  color: #1e1a1b;
+  background-color: #bcbbbd;
+  border-radius: 1em;
+  border: 2em solid #bcbbbd;
+  margin-top: 1em;
   font-style: italic;
   font-size: 3.5vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
