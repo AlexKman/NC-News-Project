@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Router, Link } from "@reach/router";
 import { getArticlesByTopic, postArticleByTopic } from "../api";
+import Button from "react-bootstrap/Button";
 
 import "../css/topic.css";
 
@@ -20,11 +21,11 @@ class Topic extends Component {
 
     return (
       <div className="topicDiv">
-        <h1 id="header">All articles for {this.props.topic}</h1>
+        <h1 id="fancyfont">All articles for {this.props.topic}</h1>
         <ul id="topicalArticleList">
           {articles.map((article, index) => (
-            <div id="topicArticleLinks">
-              <Link id="link" to={`/articles/${article.article_id}`}>
+            <div id="articlelinks">
+              <Link id="title" to={`/articles/${article.article_id}`}>
                 <p>{article.title}</p>
               </Link>
               <section id="author">{article.author}</section>
@@ -36,22 +37,34 @@ class Topic extends Component {
           ))}
         </ul>
         <section id="articlePost">
-          <text>Post your own article!</text>
-          <input
-            placeholder="title"
-            onChange={this.changeTitle}
-            value={this.state.title}
-            id="title"
-          />
-          <br />
-          <input
-            placeholder="body"
-            onChange={this.changeBody}
-            value={this.state.body}
-            id="body"
-          />
-          <button onClick={this.handleClick}>Submit</button>
+          <div id="articlePostWrapper">
+            <text>You can post your own article below!</text>
+            <input
+              placeholder="Article title"
+              className="commentInput articleTitle"
+              onChange={this.changeTitle}
+              value={this.state.title}
+            />
+            <br />
+            <textarea
+              cols="40"
+              rows="5"
+              placeholder="Article content"
+              onChange={this.changeBody}
+              className="commentInput"
+              value={this.state.body}
+              id="body"
+            />
+            <Button
+              variant="info"
+              className="buttonOrange"
+              onClick={this.handleClick}
+            >
+              Submit
+            </Button>
+          </div>
         </section>
+        <br />
       </div>
     );
   }
