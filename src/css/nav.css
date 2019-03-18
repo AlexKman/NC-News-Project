@@ -51,11 +51,11 @@
   font-family: La Belle Aurore;
   color: #de6e4b;
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .navBar {
     display: flex;
   }
-}
+} */
 #usersComp {
   text-decoration: none;
 
